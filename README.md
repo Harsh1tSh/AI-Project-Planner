@@ -19,8 +19,8 @@ An intelligent project planning tool powered by Mistral AI that helps teams crea
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/Harsh1tSh/AI-Project-Planner
+cd Project_manager
 ```
 
 2. Install the required dependencies:
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 1. Start the application:
 ```bash
-streamlit run p.py
+streamlit run Project_planner.py
 ```
 
 2. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
@@ -85,7 +85,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- Built with [CAMEL-AI](https://github.com/lightaime/camel)
+- Built with [CAMEL-AI](https://github.com/camel-ai/camel)
 - Powered by [Mistral AI](https://mistral.ai/)
 - UI Framework: [Streamlit](https://streamlit.io/)
 
