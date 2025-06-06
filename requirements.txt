@@ -1,5 +1,5 @@
 streamlit>=1.32.0
-pdfkit>=1.0.0
 Jinja2>=3.1.2
 markdown>=3.5.2
-camel-ai>=0.1.0 
+camel-ai>=0.1.0
+xhtml2pdf
