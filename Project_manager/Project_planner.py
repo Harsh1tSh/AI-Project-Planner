@@ -132,7 +132,7 @@ def generate_pdf():
         {{ architecture_html | safe }}
 
         <h2>Project Timeline</h2>
-        {{ timeline_table | safe }}
+        {{ timeline_html | safe }}
 
         <p><em>Generated on: {{ generated_date }}</em></p>
     </body>
@@ -142,15 +142,9 @@ def generate_pdf():
     # Convert the Markdown‐formatted architecture into safe HTML
     architecture_html = markdown.markdown(st.session_state.architecture)
 
-    # Build a proper HTML table for the timeline. Replace these example rows
-    # with your actual data when integrating.
-    table_rows = [
-        "<tr><th>Phase</th><th>Milestone</th><th>Start Date</th><th>End Date</th><th>Duration (days)</th></tr>",
-        "<tr><td>Phase 1: Planning</td><td>Milestone 1.1</td><td>2025-06-05</td><td>2025-06-05</td><td>1</td></tr>",
-        "<tr><td>Phase 2: Research</td><td>Milestone 2.1</td><td>2025-06-17</td><td>2025-06-19</td><td>3</td></tr>",
-        # …add your real rows here…
-    ]
-    timeline_table = f"<table>{''.join(table_rows)}</table>"
+    # Convert the timeline content to HTML
+    # First try to convert as markdown (which will handle tables if they exist)
+    timeline_html = markdown.markdown(st.session_state.timeline)
 
     # Render the Jinja2 template with the HTML pieces
     template = Template(html_template)
@@ -162,7 +156,7 @@ def generate_pdf():
         technologies=', '.join(st.session_state.technologies) if st.session_state.technologies else 'Not specified',
         description=st.session_state.description,
         architecture_html=architecture_html,
-        timeline_table=timeline_table,
+        timeline_html=timeline_html,
         generated_date=datetime.now().strftime("%Y-%m-%d %H:%M")
     )
 

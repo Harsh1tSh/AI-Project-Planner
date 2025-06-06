@@ -1,6 +1,6 @@
 # AI Project Planning Team 🚀
 
-An intelligent project planning tool powered by Mistral AI that helps teams create detailed technical architecture and project timelines. This Streamlit application leverages CAMEL-AI to provide expert-level project planning assistance.
+An intelligent project planning tool powered by Mistral AI and CAMEL-AI that helps teams create detailed technical architecture and project timelines. This Streamlit application leverages CAMEL-AI framework to provide expert-level project planning assistance.
 
 ## 🌟 Features
 
@@ -20,12 +20,16 @@ An intelligent project planning tool powered by Mistral AI that helps teams crea
 1. Clone the repository:
 ```bash
 git clone https://github.com/Harsh1tSh/AI-Project-Planner
-cd Project_manager
 ```
+2. Create a Virtual Environment 
 
-2. Install the required dependencies:
+3. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
+```
+4. Access the Directory
+```bash
+cd Project_manager
 ```
 
 ## 🔧 Required Dependencies
@@ -75,13 +79,6 @@ The application generates:
 2. Detailed Project Timeline
 3. Exportable PDF containing all project information
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
