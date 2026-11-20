@@ -140,11 +140,11 @@ def generate_pdf():
     """
 
     # Convert the Markdown‐formatted architecture into safe HTML
-    architecture_html = markdown.markdown(st.session_state.architecture)
+    architecture_html = markdown.markdown(st.session_state.architecture, extensions=["tables"])
 
     # Convert the timeline content to HTML
     # First try to convert as markdown (which will handle tables if they exist)
-    timeline_html = markdown.markdown(st.session_state.timeline)
+    timeline_html = markdown.markdown(st.session_state.timeline, extensions=["tables"])
 
     # Render the Jinja2 template with the HTML pieces
     template = Template(html_template)
